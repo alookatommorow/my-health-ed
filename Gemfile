@@ -33,6 +33,7 @@ group :development do
   gem "bullet"
   gem "spring-commands-rspec"
   gem "web-console", "~> 3.1.1"
+  gem "listen"
 end
 
 group :test do
