@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+girls = Perspective.create({ name: "girls" })
+guys = Perspective.create({ name: "guys" })
+parents = Perspective.create({ name: "parents" })
+other = Perspective.create({ name: "other" })
