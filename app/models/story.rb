@@ -1,6 +1,5 @@
-class Story < ActiveModel::Base
+class Story < ActiveRecord::Base
 	belongs_to :perspective
-	belongs_to :user
 	has_many :story_texts
 	has_many :comments
 
