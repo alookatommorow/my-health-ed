@@ -6,4 +6,5 @@
 		<div><%=raw sanitize(simple_format(text.body), tags: %w(br p) ) %></div>
 	<% end %>
 	<%= story.comments.length %>
+	<%= link_to "Comments", story_comments_path(story) %>
 <% end %>
