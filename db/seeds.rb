@@ -10,8 +10,6 @@ guys = Perspective.create!({ name: "guys" })
 parents = Perspective.create!({ name: "parents" })
 other = Perspective.create!({ name: "other" })
 
-p other
-
 girl_story = Story.create!({ perspective: girls, title: "girl story" })
 guy_story = Story.create!({ perspective: guys, title: "guy story" })
 parent_story = Story.create!({ perspective: parents, title: "parent story" })
@@ -20,23 +18,23 @@ other_story = Story.create!({ perspective: other, title: "other story" })
 girl_story_texts = StoryText.create!([
 	{ story: girl_story, body: "Giiiiiirl these bumps are driving me loco!!!"},
 	{ story: girl_story, body: "I've been washing my face like crazy after volleyball practice"},
-	{ story: girl_story, body: "But I'm still sooo oily\nPuttin makeup on isnt makin it better\nI thought growing up was supposed to be cute"}
+	{ story: girl_story, body: "But I'm still sooo oily\nPuttin makeup on isnt makin it better 	\xF0\x9F\x98\xA2 \nI thought growing up was supposed to be cute"}
 ])
 guy_story_texts = StoryText.create!([
 	{ story: guy_story, body: "Yo I had a wet dream last night" }, 
-	{ story: guy_story, body: "And when I woke up my  was bigger" }, 
+	{ story: guy_story, body: "And when I woke up my \xF0\x9F\x8D\x86 was bigger" }, 
 	{ story: guy_story, body: "Musta been cuz I was thinking bout that new girl in school" }, 
-	{ story: guy_story, body: "Told my bro at breakfast and he said it wuz normal" }
+	{ story: guy_story, body: "Told my bro at breakfast and he said it wuz normal \xF0\x9F\x99\x8C" }
 ])
 parent_story_texts = StoryText.create!([
 	{ story: parent_story, body: "My kid has his first school dance next Friday and he really wants to go" },
 	{ story: parent_story, body: "He keeps asking when I'll sign the permission slip" },
 	{ story: parent_story, body: "I trust him but wanna talk to him about how to treat girls with respect" },
-	{ story: parent_story, body: "...OR I could just show up at the dance LOL" }
+	{ story: parent_story, body: "...OR I could just show up at the dance LOL \xF0\x9F\x98\x86" }
 ])
 other_story_texts = StoryText.create!([
 	{ story: other_story, body: "My parents call me Larry but I've been going by Kandy since 6th grade" },
-	{ story: other_story, body: "My friends call me  n my teachers too" },
+	{ story: other_story, body: "My friends call me \xF0\x9F\x8D\xAC n my teachers too" },
 	{ story: other_story, body: "They even use she/her/hers pronouns with me" },
 ])
 
@@ -47,9 +45,9 @@ guys_comments = Comment.create!([
 ])
 
 girl_comments = Comment.create!([
-	{ story: girl_story, body: "Giiiiiirl these bumps are driving me loco!!!"},
-	{ story: girl_story, body: "I've been washing my face like crazy after volleyball practice"},
-	{ story: girl_story, body: "But I'm still sooo oily\nPuttin makeup on isnt makin it better\nI thought growing up was supposed to be cute"}
+	{ story: girl_story, body: "Ugh that is THE WORST"},
+	{ story: girl_story, body: "That happens to me too... \xF0\x9F\x98\xA2"},
+	{ story: girl_story, body: "My sister is going through the same thing! Hang in there!"},
 ])
 
 other_comments = Comment.create!([
