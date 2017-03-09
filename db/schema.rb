@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20170307220415) do
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
-    t.string   "body"
+    t.text     "body"
     t.integer  "story_id"
     t.integer  "user_id"
     t.datetime "created_at", null: false
@@ -43,11 +43,11 @@ ActiveRecord::Schema.define(version: 20170307220415) do
   end
 
   create_table "story_texts", force: :cascade do |t|
-    t.string   "body"
-    t.integer  "comment_id"
+    t.text     "body"
+    t.integer  "story_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["comment_id"], name: "index_story_texts_on_comment_id", using: :btree
+    t.index ["story_id"], name: "index_story_texts_on_story_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
