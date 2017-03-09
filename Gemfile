@@ -42,6 +42,7 @@ group :test do
   gem "codeclimate-test-reporter", "~> 1.0.0"
   gem "factory_girl_rails"
   gem "database_cleaner"
+  gem "rails-controller-testing"
   gem "rake"
   gem "simplecov"
   gem "webmock"
