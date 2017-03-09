@@ -1,1 +1,9 @@
 <h1>Story: <%= @perspective.name %></h1>
+
+<% @perspective.stories.each do |story| %>
+	<%= story.title %>
+	<% story.story_texts.each do |text| %>
+		<div><%=raw sanitize(simple_format(text.body), tags: %w(br p) ) %></div>
+	<% end %>
+	<%= story.comments.length %>
+<% end %>
