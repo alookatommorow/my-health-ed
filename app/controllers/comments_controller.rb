@@ -1,6 +1,9 @@
 class CommentsController < ApplicationController
 	def index
+		@story = Story.find(params[:story_id])
 		@comments = Comment.where(story_id: params[:story_id])
+		@comment = Comment.new
+
 	end
 
 	def create
