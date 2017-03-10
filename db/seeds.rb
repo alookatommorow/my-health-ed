@@ -36,6 +36,7 @@ other_story_texts = StoryText.create!([
 	{ story: other_story, body: "My parents call me Larry but I've been going by Kandy since 6th grade" },
 	{ story: other_story, body: "My friends call me \xF0\x9F\x8D\xAC n my teachers too" },
 	{ story: other_story, body: "They even use she/her/hers pronouns with me" },
+	{ story: other_story, body: "Proud to be #transgender" }
 ])
 
 guys_comments = Comment.create!([

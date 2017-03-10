@@ -4,8 +4,9 @@
 	width: 100%;
 	height: 60px;
 	background-color: $light-blue-green;
+	z-index: 666;
 
-	.fa {
+	a {
 		color: $white;
 		position: absolute;
     top: 50%;
