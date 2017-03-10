@@ -5,6 +5,7 @@ FactoryGirl.define do
 
   factory :story do 
     sequence(:title) { |i| "story#{i}" }
+    perspective
   end
 
   factory :story_text do 
