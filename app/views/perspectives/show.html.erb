@@ -1,20 +1,31 @@
-<div id="perspective-show">
-	<h1 class="title">Story: <%= @perspective.name.capitalize %></h1>
-	<% case @perspective.name
-		when "girls" %>
-			<div class="story-time">Friday 10:46 PM</div>
-		<% when "guys" %>
-			<div class="story-time">Monday 7:19 PM</div>
-		<% when "other" %>
-			<div class="story-time">Thursday 3:21 PM</div>
-		<% when "parents" %>
-			<div class="story-time">Tuesday 11:21 AM</div>
-	<% end %>
-	<% @perspective.stories.each do |story| %>
-		<% story.story_texts.each do |text| %>
-			<div class="text-msg"><%=raw sanitize(simple_format(text.body), tags: %w(br p) ) %></div>
+<% content_for :title, "Story: #{@perspective.name.capitalize}" %>
+<div class="content-wrap">
+	<div id="perspective-show">
+		<% case @perspective.name
+			when "girls" %>
+				<div class="story-time">Friday 10:46 PM</div>
+			<% when "guys" %>
+				<div class="story-time">Monday 7:19 PM</div>
+			<% when "other" %>
+				<div class="story-time">Thursday 3:21 PM</div>
+			<% when "parents" %>
+				<div class="story-time">Tuesday 11:21 AM</div>
 		<% end %>
-		<%= story.comments.length %>
-		<%= link_to "Comments", story_comments_path(story) %>
-	<% end %>
+		<% @perspective.stories.each do |story| %>
+			<% case @perspective.name
+				when "girls" %>
+					<% user_names = ["pilot_tx", "seegar1549", "futureastronaut88"] %>
+					<%= render partial: "/layouts/girls-story", locals: { story: story, user_names: user_names  } %>
+				<% when "guys" %>
+					<% user_names = ["pilot_tx", "seegar1549", "futureastronaut88"] %>
+					<%= render partial: "/layouts/guys-story", locals: { story: story, user_names: user_names  } %>
+				<% when "other" %>
+					<% user_names = ["pilot_tx", "seegar1549", "futureastronaut88"] %>
+					<%= render partial: "/layouts/other-story", locals: { story: story, user_names: user_names  } %>
+				<% when "parents" %>
+					<% user_names = ["pilot_tx", "seegar1549", "futureastronaut88"] %>
+					<%= render partial: "/layouts/parents-story", locals: { story: story, user_names: user_names  } %>
+			<% end %>
+		<% end %>
+	</div>
 </div>

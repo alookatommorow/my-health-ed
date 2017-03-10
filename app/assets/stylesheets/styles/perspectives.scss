@@ -63,6 +63,8 @@
 
 #perspective-show {
 	padding: 0 20px 0 20px;
+	height: 100%;
+  min-height: 100%;
 
 	.story-time {
 		color: $dark-gray;
