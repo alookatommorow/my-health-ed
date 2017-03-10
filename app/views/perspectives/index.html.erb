@@ -1,4 +1,26 @@
-<h1>Home</h1>
-<% @perspectives.each do |perspective| %>
-	<%= link_to perspective.name, perspective %>
-<% end %>
+<h1 class="title">Real Talk</h1>
+<div class="perspectives-container">
+	<% @perspectives.each do |perspective| %>
+		<%= link_to perspective, class: "perspective #{perspective.name}" do %>
+			<h5 class="perspective-name"><%= perspective.name %></h6>
+			<div class="icon-container">
+				<% case perspective.name
+					when "girls" %>
+						<%= fa_icon "venus 3x" %>
+					<% when "guys" %>
+						<%= fa_icon "mars 3x" %>
+					<% when "other" %>
+						<%= fa_icon "transgender 3x" %>
+					<% when "parents" %>
+						<span class="letter">P</span>
+				<% end %>
+			</div>
+			<div class="comment-count">
+				<div class="content">
+					<%= fa_icon "comment-o" %>
+					<span>3</span>	
+				</div>
+			</div>
+		<% end %>
+	<% end %>
+</div>

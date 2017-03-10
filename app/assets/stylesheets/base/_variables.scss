@@ -1,5 +1,12 @@
 $light-blue-green: #8BD5CC;
 $white: #FFFFFF;
+$green: #4B8881;
+$red: #D75345;
+$purple: #7D36C4;
+$orange: #E28644;
+$gray: #F2F2F2;
+$dark-gray: #9B9B9B;
+
 
 $tablet-small: "(min-width: 768px)";
 $tablet-medium: "(min-width: 992px)";
@@ -8,4 +15,4 @@ $desktop-small: "(min-width: 1025px)";
 $desktop-large: "(min-width: 1200px)";
 
 $mobile-nav-height: 60px;
-$mobile-page-top: calc(#{$mobile-nav-height} + 15px);
+$mobile-page-top: calc(#{$mobile-nav-height} + 40px);
