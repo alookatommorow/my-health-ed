@@ -1,0 +1,7 @@
+<% @comments.each do |comment| %>
+	<h1><%= comment.body %></h1>
+<% end %>
+<%= simple_form_for [@story, @comment] do |f| %>
+  <%= f.input :body %>
+  <%= f.button :submit %>
+<% end %>
