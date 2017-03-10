@@ -23,12 +23,7 @@ html {
 
 body {
   min-height: 100%;
-  position: relative;
-  background-color: red;
-}
-
-html, body {
-  width: 100%;
+  margin: 0;
 }
 
 * {
@@ -42,10 +37,6 @@ html, body {
 /**
  * Remove the margin in all browsers (opinionated).
  */
-
-body {
-  margin: 0;
-}
 
 /**
  * Add the correct display in IE 9-.

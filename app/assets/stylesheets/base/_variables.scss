@@ -1,7 +1,11 @@
 $light-blue-green: #8BD5CC;
+$white: #FFFFFF;
 
 $tablet-small: "(min-width: 768px)";
 $tablet-medium: "(min-width: 992px)";
 $tablet-large: "(min-width: 1024px)";
 $desktop-small: "(min-width: 1025px)";
 $desktop-large: "(min-width: 1200px)";
+
+$mobile-nav-height: 60px;
+$mobile-page-top: calc(#{$mobile-nav-height} + 15px);
