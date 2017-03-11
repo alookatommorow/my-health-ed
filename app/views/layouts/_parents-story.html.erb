@@ -3,5 +3,5 @@
 <% end %>
 
 <%= link_to story_comments_path(story), class: "comment-link" do %>
-	<%= fa_icon "comment-o" %><span> 3 Comments</span>
+	<%= fa_icon "comment-o" %><span> <%= story.comments.count %> Comments</span>
 <% end %>

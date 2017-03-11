@@ -6,10 +6,14 @@
 	<%= fa_icon "comment-o" %><span> Comment</span>
 <% end %>
 <div class="comment-preview all">
-	<div class="swipe-up">Swipe up to view all 3 comments</div>
+	<div class="swipe-up">Swipe up to view all <%= story.comments.count %> comments</div>
 	<% story.comments.each_with_index do |comment, index| %>
 		<div class="comment-preview-item">
-			<span class="username"><%= user_names[index] %></span><span> <%= comment.body %></span>
+			<% if index < 3 %>
+				<span class="username"><%= user_names[index] %></span><span> <%= comment.body %></span>
+			<% else %>
+				<span class="username">anonymouse</span><span> <%= comment.body %></span>
+			<% end %>
 		</div>
 	<% end %>
 </div>

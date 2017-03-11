@@ -1,6 +1,6 @@
 <div class="comment-link-container">
 	<%= link_to story_comments_path(story), class: "comment-link" do %>
-		<%= fa_icon "comment-o" %><span> 3</span>
+		<%= fa_icon "comment-o" %><span> <%= story.comments.count %></span>
 	<% end %>
 </div>
 <% story.story_texts.each do |text| %>
