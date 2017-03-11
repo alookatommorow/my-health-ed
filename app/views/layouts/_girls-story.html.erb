@@ -6,7 +6,7 @@
 	<%= fa_icon "comment-o" %><span> Comment</span>
 <% end %>
 <div class="comment-preview">
-	<%= link_to "View all 3 comments", story_comments_path(story)%>
+	<%= link_to "View all #{story.comments.count} comments", story_comments_path(story)%>
 
 	<% (1..2).each do |n| %>
 		<div class="comment-preview-item">

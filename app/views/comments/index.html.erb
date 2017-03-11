@@ -2,23 +2,49 @@
 	comment_times = ["2d", "3h", "1m"]
 %>
 <% content_for :title, "Comments" %>
-<div class="content-wrap">
-	<% @comments.each_with_index do |comment, index| %>
-		<div class="comment-item">
-			<div>
-				<span class="username"><%= user_names.sample %></span>
-				<span><%= comment.body %></span>
+<div class="content-wrap min-height">
+	<div data-ajax-replace="comments-container">
+		<% @comments.each_with_index do |comment, index| %>
+			<div class="comment-item">
+				<% if index < 3 %>
+
+					<div>
+						<span class="username"><%= user_names.sample %></span>
+						<span><%= comment.body %></span>
+					</div>
+					<div>
+						<span><%= comment_times[index] %></span>
+					</div>
+				
+				<% else %>
+
+					<div>
+						<span class="username">Anonymous</span>
+						<span><%= comment.body %></span>
+					</div>
+					<div>
+						<span>Recently</span>
+					</div>
+
+				<% end %>
 			</div>
-			<div>
-				<span><%= comment_times[index] %></span>
-			</div>
-		</div>
-	<% end %>
-	<%= simple_form_for [@story, @comment], id: "comment-form" do |f| %>
-	  <%= f.input :body, label: false %>
-	  <%= f.button :submit %>
-	<% end %>
+		<% end %>	
+	</div>
+</div>
+<div class="comment-bottom-menu">
+	
 	<div class="comment-button" id="comment-button">
 		<%= fa_icon "comment-o" %><span> Comment</span>
 	</div>
+
+	<div id="comment-form-container">
+		<%= form_for [@story, @comment], data: { ajax_submit: "comments-container" }, html: { id: "comment-form" } do |f| %>
+		  <%= f.text_area :body, label: false, placeholder: "Tell us what you think about this story..." %>
+		  <%= f.submit "Comment", class: "comment-submit-button" %>
+		<% end %>
+		<div class="cancel-button">
+			Cancel
+		</div>
+	</div>
+	
 </div>
