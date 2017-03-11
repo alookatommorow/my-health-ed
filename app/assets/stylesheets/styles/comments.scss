@@ -51,6 +51,48 @@
 	font-weight: bold;
 }
 
+.comment-bottom-menu {
+	margin-top: 20px;
+	position: relative;
+
+	#comment-form-container {
+		padding-top: 20px;
+		display: none;
+		z-index: 555;
+		position: absolute;
+		bottom: 0;
+		width: 88%;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: $white;
+		padding-bottom: 40px;
+		text-align: center;
+
+		textarea {
+			width: 100%;
+			height: 200px;
+		}
+
+		.cancel-button, .comment-submit-button {
+			background-color: $light-blue-green;
+			margin-top: 20px;
+			color: $white;
+			text-align: center;
+			border-radius: 25px;
+			padding: 10px 0;
+			width: 80%;
+			font-size: 20px;
+			cursor: pointer;
+			font-weight: 300;
+		}
+
+		.cancel-button {
+			margin: 20px auto 0 auto;
+		}
+	}
+
+}
+
 .comment-button {
 	color: $light-blue-green;
 	text-align: center;
@@ -58,9 +100,8 @@
 	border-radius: 25px;
 	padding: 10px 0;
 	font-size: 20px;
-	position: absolute;
-	bottom: 10px;
 	width: 80%;
-	left: 50%;
-	transform: translateX(-50%);
+	margin: 0 auto;
+	cursor: pointer;
 }
+
