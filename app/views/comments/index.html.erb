@@ -1,10 +1,24 @@
-<% @comments.each do |comment| %>
-	<div class="text-msg"><%= comment.body %></div>
-<% end %>
-<%= simple_form_for [@story, @comment] do |f| %>
-  <%= f.input :body %>
-  <%= f.button :submit %>
-<% end %>
-<div id="comment-button">
-	<%= fa_icon "comment-o" %><span> Comment</span>
+<% user_names =  ["pilot_tx", "seegar1549", "futureastronaut88", "bike_nc", "music023", "painter67", "kandykrush", "doublerainbow1155"] 
+	comment_times = ["2d", "3h", "1m"]
+%>
+<% content_for :title, "Comments" %>
+<div class="content-wrap">
+	<% @comments.each_with_index do |comment, index| %>
+		<div class="comment-item">
+			<div>
+				<span class="username"><%= user_names.sample %></span>
+				<span><%= comment.body %></span>
+			</div>
+			<div>
+				<span><%= comment_times[index] %></span>
+			</div>
+		</div>
+	<% end %>
+	<%= simple_form_for [@story, @comment], id: "comment-form" do |f| %>
+	  <%= f.input :body, label: false %>
+	  <%= f.button :submit %>
+	<% end %>
+	<div class="comment-button" id="comment-button">
+		<%= fa_icon "comment-o" %><span> Comment</span>
+	</div>
 </div>

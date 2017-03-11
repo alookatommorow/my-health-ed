@@ -69,6 +69,7 @@ body {
   margin: 0 auto;
   height: 100%;
   position: relative;
+  padding: 0 30px;
 }
 
 .text-msg {
@@ -105,12 +106,6 @@ body {
 
 	.comment-preview-item {
 		margin-top: 10px;
-
-		.username {
-			font-family: "Proxima Nova Bold";
-			color: black;
-			font-weight: bold;
-		}
 	}
 
 	&.all {
@@ -120,11 +115,28 @@ body {
 			text-align: center;
 			margin-bottom: 30px;
 		}
-
 	}
 }
 
-#comment-button {
+.comment-item {
+	border-bottom: 1px solid $gray;
+	color: $dark-gray;
+	padding: 10px 0;
+	display: flex;
+	justify-content: space-between;
+
+	div:last-child {
+		padding-left: 20px;
+	}
+}
+
+.username {
+	font-family: "Proxima Nova Bold";
+	color: black;
+	font-weight: bold;
+}
+
+.comment-button {
 	color: $light-blue-green;
 	text-align: center;
 	border: 2px solid $light-blue-green;
