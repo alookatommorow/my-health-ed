@@ -52,8 +52,9 @@
 }
 
 .comment-bottom-menu {
-	margin: 20px 0;
+	margin: 20px auto;
 	position: relative;
+	max-width: 500px;	
 
 	#comment-form-container {
 		padding-top: 20px;
