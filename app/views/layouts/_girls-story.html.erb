@@ -1,6 +1,15 @@
 <% story.story_texts.each do |text| %>
 	<div class="text-msg"><%=raw sanitize(simple_format(text.body), tags: %w(br p) ) %></div>
+
 <% end %>
+<div class="text-msg">
+	<a href="http://www.kids.pbs.org/itsmylife/body/puberty/article4.html">
+		<%= image_tag("makeup.jpg") %>
+		<div class="link-header">Puberty: It's the Zits!</div>
+		<div class="link-text">One of the more annoying changes during puberty happens to your skin. Yup, we're talking about acne...</div>
+		<div class="link-link">pbskids.org</div>
+	</a>
+</div>
 
 <%= link_to story_comments_path(story), class: "comment-link" do %>
 	<%= fa_icon "comment-o" %><span> Comment</span>
