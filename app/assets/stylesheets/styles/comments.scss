@@ -9,11 +9,12 @@
 .comment-preview {
 	color: #9B9B9B;
   position: absolute;
-  bottom: 0;
+  top: 105%;
   left: 50%;
   width: 85%;
   margin: 0 auto;
   transform: translateX(-50%);
+  padding: 0 20px;
 
 	a {
 		color: $dark-gray;
@@ -24,7 +25,7 @@
 	}
 
 	&.all {
-		top: 92%;
+		top: 110%;
 
 		.swipe-up {
 			text-align: center;
