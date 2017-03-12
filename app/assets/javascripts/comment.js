@@ -16,6 +16,14 @@ document.addEventListener("turbolinks:load", function() {
     $("#comment-form-container").slideToggle();
   });
 
+  $("[data-analytics-event]").click(function() {
+    ga("send", {
+      hitType: "event",
+      eventCategory: "links",
+      eventAction: "click"
+    });
+  })
+
   function renderResponse(response) {
     var container = $(this).data("ajax-submit");
     sendAnalyticsEvent("create");
@@ -30,7 +38,7 @@ document.addEventListener("turbolinks:load", function() {
     ga("send", {
       hitType: "event",
       eventCategory: "comments",
-      eventAction: action,
+      eventAction: action
     });
   }
 });
